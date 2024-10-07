@@ -1,0 +1,45 @@
+<main id="form">
+    <p>Complete the form below by entering an example of each category listed.</p>
+    <div id="formInputs">
+        <label for="name">Male First Name: <input id="name" type="text" [(ngModel)]="entryData.name" /></label>
+        <label for="friend">Male First Name: <input id="friend" type="text" [(ngModel)]="entryData.friend" /></label>
+        <label for="country">Foreign Country: <input id="country" type="text" [(ngModel)]="entryData.country" /></label>
+        <label for="city">Local city: <input id="city" type="text" [(ngModel)]="entryData.city" /></label>
+        <label for="adjective1">Adjective: <input id="adjective1" type="text"
+                [(ngModel)]="entryData.adjective1" /></label>
+        <label for="adjective2">Adjective: <input id="adjective2" type="text"
+                [(ngModel)]="entryData.adjective2" /></label>
+        <label for="adjective3">Adjective: <input id="adjective3" type="text"
+                [(ngModel)]="entryData.adjective3" /></label>
+        <label for="adjective4">Adjective: <input id="adjective4" type="text"
+                [(ngModel)]="entryData.adjective4" /></label>
+        <label for="adjective5">Adjective: <input id="adjective5" type="text"
+                [(ngModel)]="entryData.adjective5" /></label>
+        <label for="adjective6">Adjective: <input id="adjective6" type="text"
+                [(ngModel)]="entryData.adjective6" /></label>
+        <label for="verb1">Verb: <input id="verb1" type="text" [(ngModel)]="entryData.verb1" /></label>
+        <label for="verb2">Verb: <input id="verb2" type="text" [(ngModel)]="entryData.verb2" /></label>
+        <label for="verb3">Verb ending in 'ing': <input id="verb3" type="text" [(ngModel)]="entryData.verb3" /></label>
+        <label for="adverb1">Adverb: <input id="adverb1" type="text" [(ngModel)]="entryData.adverb1" /></label>
+        <label for="adverb2">Adverb: <input id="adverb2" type="text" [(ngModel)]="entryData.adverb2" /></label>
+        <label for="unitOfTime">Unit of Time: <input id="unitOfTime" type="text"
+                [(ngModel)]="entryData.unitOfTime" /></label>
+        <label for="number">Number: <input id="number" type="number" [(ngModel)]="entryData.number" /></label>
+        <label for="bodyPart">Body Part: <input id="bodyPart" type="text" [(ngModel)]="entryData.bodyPart" /></label>
+        <label for="sense">One of the 5 senses: <input id="sense" type="text" [(ngModel)]="entryData.sense" /></label>
+        <label for="familyMember">Family Member: <input id="familyMember" type="text"
+                [(ngModel)]="entryData.familyMember" /></label>
+        <label for="colour">Colour: <input id="colour" type="text" [(ngModel)]="entryData.colour" /></label>
+        <label for="emotion">Emotion: <input id="emotion" type="text" [(ngModel)]="entryData.emotion" /></label>
+    </div>
+    <button type="button" (click)="generateResults()" class="button">Submit</button>
+
+    @if(showResults){
+    @defer {
+    <results [entries]="entryData" (restartEvent)="restart()" />
+    } @loading (minimum 3s) {
+    <p class="results">Writing your story...</p>
+    }
+    }
+
+</main>

@@ -1,0 +1,20 @@
+<p class="results">
+    It was Erev Sukkos and <span [innerHTML]="entries.name | propernoun"></span> was on a hunt for an
+    {{entries.adjective1 }} esrog. At his first stop, he asked the seller if he had any esrogim from <span
+        [innerHTML]="entries.country | propernoun"></span>. The seller had to
+    {{entries.verb1}} his inventory. He was {{entries.adjective2 }} when he saw that he did not.
+    At the next seller, <span [innerHTML]="entries.name | propernoun"></span> met his good friend, <span
+        [innerHTML]="entries.friend | propernoun"></span>. <span [innerHTML]="entries.friend | propernoun"></span>
+    advised him to {{entries.verb2}} to a seller in <span [innerHTML]="entries.city | propernoun"></span>
+    because his esrogim were {{entries.adjective3}}. At that point, <span
+        [innerHTML]="entries.name | propernoun"></span> had already been {{entries.verb3}} for an
+    esrog for {{entries.number}} {{entries.unitOfTime}} and his {{entries.bodyPart}} was hurting, but he
+    {{entries.adverb1}} persevered. When he got to
+    the store in <span [innerHTML]="entries.city | propernoun"></span>, he found a {{entries.adjective4}} esrog! He was
+    so
+    {{entries.emotion}}! The esrog was perfectly {{entries.colour}} and had a {{entries.adjective5}} pitom. It had a
+    {{entries.adjective6}} {{entries.sense}} too. He was sure his {{entries.familyMember}} would approve!
+    <span [innerHTML]="entries.name | propernoun"></span> {{entries.adverb2}} went back home, mission accomplished!
+</p>
+<button type="button" (click)="restart()" class="button">Restart</button>
+<a id="link" routerLink="/more">Learn More</a>
